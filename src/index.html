@@ -1,42 +1,157 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TIC TAC TOE</title>
-</head>
-<body>
-  <h1>TIC TAC TOE</h1>
-  <div class="main-wrapper">
-    <div class="board-wrapper">
-      <div class="board">
-        <div id="0" class="box"></div>
-        <div id="1" class="box"></div>
-        <div id="2" class="box"></div>
-        <div id="3" class="box"></div>
-        <div id="4" class="box"></div>
-        <div id="5" class="box"></div>
-        <div id="6" class="box"></div>
-        <div id="7" class="box"></div>
-        <div id="8" class="box"></div>
-      </div>
-    </div>
-  
-    <div class=", result-wrapper">
-      <div id="time" class="clock">
-        00:00
-      </div>
-      <div class="players-wrapper">
-        <div class="player player-active">
-          <p>Player 1 :</p>
-          <p class="player1-score"></p>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+        <title>Test Fidesio</title>
+        <link href="https://fonts.googleapis.com/css?family=Merriweather|Roboto:400,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">    
+    </head>
+    <body>
+        <div class="header-container">
+            <div id="js-header-wrapper" class="header-wrapper">
+                <nav id="js-header-navbar" class="header-navbar">
+                    <ul>
+                        <li class="active-link"><span>école</span></li>
+                        <li><span>robotique</span></li>
+                        <li><span>industrie du futur</span></li>
+                    </ul>
+                </nav>
+                <div id="js-article1" class="header-text-preview active-article">
+                    <h2>Un printemps robotique à Arts et Métiers</h2>
+                    <p>Le campus Arts et Métiers de Lille, se positionne comme un acteur incontournable de la robotique par ses activités de formation, de recherche et de transfert technologique.</p>
+                    <a href="#">> Lire plus</a>
+                </div>
+                <div id="js-article2" class="header-text-preview">
+                    <h2>La robotique</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quod recusandae amet dolore fugiat hic. Exercitationem doloremque eum expedita laudantium corrupti temporibus? Quibusdam doloribus illo odit quaerat.</p>
+                    <a href="#">> Lire plus</a>
+                </div>
+                <div id="js-article3" class="header-text-preview">
+                    <h2>Industrie du futur</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, exceptur</p>
+                    <a href="#">> Lire plus</a>
+                </div>
+            </div>
+            <div class="header-banner-black">
+                <div>
+                    <span>
+                      <h4>Partenariat</h4>
+                      <p>Schneider Electric s’engage dans la campagne de mécénat d’ Arts et Métiers</p>
+                      <a href="#">> Lire plus</a>
+                    </span>
+                </div>
+                <div>
+                    <span>
+                      <h4>école</h4>
+                      <p>Qualité et responsabilité Sociale des entreprises</p>
+                      <a href="#">> Lire plus</a>
+                    </span>
+                </div>
+                <div>
+                    <span>
+                      <h4>Portrait</h4>
+                      <p>Ma vie d’étudiante à Arts et Métiers : Julie, en Bachelor de technologie à Bordeaux</p>
+                      <a href="#">> Lire plus</a>
+                    </span>
+                </div>
+            </div>
         </div>
-        <div class="player">
-          <p>Player 2 :</p>
-          <p class="player2-score"></p>
+        <div class="page-container">
+          <div class="polygon-container">
+            <div class="menu-list">
+              <div>
+                <div class="title-box">
+                  <span class="underline"></span>
+                  <h3>école</h3>
+                </div>
+                <ul>
+                  <li>Présentation</li>
+                  <li>Réseau Arts et Métiers partenaires</li>
+                  <li>Une école engagée</li>
+                  <li>Les campus Arts et Métiers</li>
+                  <li>International</li>
+                  <li>Agenda</li>
+                  <li>Actualités</li>
+                  <li>L’école recrute</li>
+                  <li>Marchés publics</li>
+                </ul>
+              </div>
+              <div>
+                <div class="title-box">
+                  <span class="underline"></span>
+                  <h3>formation</h3>
+                </div>
+                <ul>
+                  <li>Bachelor de technologie</li>
+                  <li>Ingénieur généraliste</li>
+                  <li>Ingénieur de spécialité</li>
+                  <li>Masters recherche</li>
+                  <li>Mastères spécialisés et MBA</li>
+                  <li>Doctorat</li>
+                  <li>Etudiants internationaux</li>
+                  <li>Formation tout au long de la vie</li>
+                  <li>MOOCS</li>
+                  <li>Vie étudiante</li>
+                </ul>
+              </div>
+              <div>
+                <div class="title-box">
+                  <span class="underline"></span>
+                  <h3>recherche</h3>
+                </div>
+                <ul>
+                  <li>Filières de recherche</li>
+                  <li>Les réseaux nationaux de la connaissance (RNC)</li>
+                  <li>Recherche partenariale</li>
+                  <li>Publications</li>
+                </ul>
+              </div>
+              <div>
+                <div class="title-box">
+                  <span class="underline"></span>
+                  <h3>entreprise</h3>
+                </div>
+                <ul>
+                  <li>Recruter nos étudiants</li>
+                  <li>Soutenir l’école</li>
+                  <li>Transfert et valorisation</li>
+                  <li>Entrepreneuriat</li>
+                  <li>Former vos collaborateurs</li>
+                  <li>Organiser un évènement</li>
+                </ul>
+              </div>
+            </div>
+            <div class="logo-list">
+              <img src='./src/img/logo_1.png' alt="Institut Carnot">
+              <img src='./src/img/logo_2.png' alt="ParisTech">
+              <img src='./src/img/logo_3.png' alt="heSam université">
+            </div>
+          </div>
+          <div class="content-right">
+            <div class="location-cursor">
+              <i class="fas fa-map-marker"><img src='./src/img/logoAM.png' alt="logo-cursor"></i>
+              <p>Ecole Nationale Supérieur des Arts et Métiers</p>
+            </div>
+            <div class="location-detail-container">
+                <p class="location-city">Campus : <strong>Paris</strong></p>
+                <p>151, boulevard de l’Hôpital, 75013 Paris</p>
+                <p>Tél : 33 (0)1 44 24 62 99</p>
+                <p>Métro : Place d’Italie</p>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
-</body>
+        <div class="footer-container">
+          <p class="credits">© Ecole Nationale Supérieur des Arts et Métiers 2016</p>
+          <div class="footer-menu-list">
+            <a href="#"><p>Rejoignez-nous</p></a>
+            <a href="#"><p>Contactez-nous</p></a>
+            <a href="#"><p>Plan d'accès</p></a>
+            <a href="#"><p>Mentions légales</p></a>
+          </div>
+          <p class="agence">Agence fidesio</p>
+        </div>
+        
+    </body>
+    
 </html>
