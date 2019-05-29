@@ -29,6 +29,9 @@ body {
 
 
 .header-container {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.4)), color-stop(80%, rgba(0, 0, 0, 0))), url('../img/header.jpg');
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 80%), url('../img/header.jpg');
+  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 80%), url('../img/header.jpg');
   background-image: linear-gradient(-270deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 80%), url('../img/header.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -60,7 +63,8 @@ body {
     .active-link {
       background: $orange; 
       &:hover:not(.active) {
-        filter: none;
+        -webkit-filter: none;
+                filter: none;
         cursor: default;
       }
     }
@@ -69,16 +73,21 @@ body {
       font-size: 13px;
       line-height: 20px;
       padding: 10px 20px;
-      transform: skewx(-30deg);
+      -webkit-transform: skewx(-30deg);
+          -ms-transform: skewx(-30deg);
+              transform: skewx(-30deg);
       display: inline-block;
       text-transform: uppercase;
       cursor: pointer;
       span {
-      transform: skewx(30deg);
+      -webkit-transform: skewx(30deg);
+          -ms-transform: skewx(30deg);
+              transform: skewx(30deg);
       display: block;
       }
       &:hover{
-        filter: grayscale(20%);
+        -webkit-filter: grayscale(20%);
+                filter: grayscale(20%);
       }
       @media screen and (max-width: $tablet) {
         padding: 10px 15px;
@@ -90,7 +99,13 @@ body {
 
 .active-article {
   display: block !important;
-  animation: fadein 1s;
+  -webkit-animation: fadein 1s;
+          animation: fadein 1s;
+}
+
+@-webkit-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
 @keyframes fadein {
@@ -128,10 +143,14 @@ body {
     color: inherit;
     font-weight: 400;
     font-size: 16px;
-    line-height: 20px;
+    line-height: 42px;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
     transition: 0.2s;
     &:hover{
       color: $light-gray;
+      -webkit-transition: 0.2s;
+      -o-transition: 0.2s;
       transition: 0.2s;
     }
     @media screen and (max-width: $mobile) {
@@ -141,55 +160,165 @@ body {
   }
 }
 
+/////SLIDER/////
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.slide {
+  display: none;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  width: 0;
+  height: 0;
+}
+
+.prev {
+  left: 0;
+  top: 0;
+  border-left: 0px solid transparent;
+  border-right: 80px solid transparent;
+  border-top: 140px solid $dark-gray;
+  @media screen and (max-width: $mobile) {
+    border-top: 140px solid transparent;
+  }
+  p{
+    position: absolute;
+    top: -110px;
+    left: 20px;
+    font-size: 18px;
+    color: $gray;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+    @media screen and (max-width: $mobile) {
+      top: -50px;
+      left: 10px;
+    }
+  } 
+}
+
+.next {
+  right: 0;
+  bottom: 0;
+  border-left: 80px solid transparent;
+  border-right: 3px solid transparent;
+  border-bottom: 140px solid $dark-gray;
+  @media screen and (max-width: $mobile) {
+    border-bottom: 140px solid transparent;
+  }
+  p{
+    position: absolute;
+    top: 100px;
+    right: 20px;
+    font-size: 18px;
+    color: $gray;
+    @media screen and (max-width: $mobile) {
+      top: 35px;
+      right: 10px;
+    }
+  } 
+}
+
+.fade {
+  -webkit-animation-name: fade;
+          animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/////////////////
+
 .header-banner-black {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background: $dark-gray;
-  opacity: 0.9;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: rgba(21, 21, 33, 0.9);
   max-width: 100vw;
   height: 180px;
+  padding: 0px 30px;
   overflow: hidden;
   @media screen and (max-width: $mobile) {
     height: 200px;
   }
   div {
-    width: 30%;
-    border-right: 1px solid $gray;
+    width: 100%;
     min-height: 110px;
-    transform: skew(-30deg);
     position: relative;
-    &:last-of-type {
-      border-right: none;
-    }
     @media screen and (max-width: $mobile) {
-      transform: skew(0deg);
       margin: 0px 0px 10px;
-      width: 33%;
+      transform: skew(-30deg);
     }
-    span {
-      position: absolute;
-      transform: skew(30deg);
-      padding: 0px 30px;
+    .slider-element {
+      width: 90%;
+      -webkit-transform: skew(-30deg);
+          -ms-transform: skew(-30deg);
+              transform: skew(-30deg);
+      padding: 0px 50px;
+      border-right: 1px solid $gray;
+      &:last-of-type {
+        border-right: none;
+      }
+      div {
+        -webkit-transform: skew(30deg);
+            -ms-transform: skew(30deg);
+                transform: skew(30deg);
+      @media screen and (max-width: $mobile) {
+        -webkit-transform: skew(0deg);
+            -ms-transform: skew(0deg);
+                transform: skew(0deg);
+        margin-top: 10px;
+      }
+      }
       @media screen and (max-width: $tablet) {
-        padding: 0px 15px;
+        padding: 0px 20px 0px 50px;
       }
       @media screen and (max-width: $mobile) {
-        transform: skew(0deg);
+        -webkit-transform: skew(30deg);
+            -ms-transform: skew(30deg);
+                transform: skew(30deg);
         padding: 0px 10px;
       }
     }
     h4 {
-      margin: 10px 0px;
       text-transform: uppercase;
       font-size: 12px;
+      line-height: 38px;
       color: $orange;
       font-weight: 400;
+     
     }
     p {
-      font-size: 14px;
+      font-size: 18px;
       font-weight: 400;
       margin: 0;
+      @media screen and (max-width: $tablet) {
+        font-size: 16px;
+      }
       @media screen and (max-width: $mobile) {
         font-size: 12px;
       }
@@ -199,15 +328,23 @@ body {
       text-decoration: none;
       color: $gray;
       font-weight: 400;
-      font-size: 14px;
-      line-height: 20px;
+      font-size: 16px;
+      line-height: 42px;
       display: table-cell;
-      padding: 10px 0px;
+      -webkit-transition: 0.2s;
+      -o-transition: 0.2s;
       transition: 0.2s;
+     
       &:hover{
         color: $white;
+        -webkit-transition: 0.2s;
+        -o-transition: 0.2s;
         transition: 0.2s;
       }
+      @media screen and (max-width: $tablet) {
+        font-size: 14px;
+      }
+      
       @media screen and (max-width: $mobile) {
         font-size: 12px;
         padding: 8px 0px;
@@ -218,6 +355,9 @@ body {
 
 
 .page-container {
+  background: -webkit-gradient(linear,left bottom, left top,from(rgba(21,21,33,0.9)),to(rgba(21,21,33,0.9))), url('../img/map.png');
+  background: -webkit-linear-gradient(bottom,rgba(21,21,33,0.9),rgba(21,21,33,0.9)), url('../img/map.png');
+  background: -o-linear-gradient(bottom,rgba(21,21,33,0.9),rgba(21,21,33,0.9)), url('../img/map.png');
   background: linear-gradient(0deg,rgba(21,21,33,0.9),rgba(21,21,33,0.9)), url('../img/map.png');
   background-size: 50%;
   background-repeat: no-repeat;
@@ -229,27 +369,37 @@ body {
   }
   .polygon-container {
     background: $white;
-    clip-path: polygon(0 0, 72% 0, 61% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 0, 72% 0, 61% 100%, 0 100%);
+            clip-path: polygon(0 0, 72% 0, 61% 100%, 0 100%);
     @media screen and (max-width: $bigScreen) {
-      clip-path: polygon(0 0, 78% 0, 60% 100%, 0 100%);
+      -webkit-clip-path: polygon(0 0, 78% 0, 60% 100%, 0 100%);
+              clip-path: polygon(0 0, 78% 0, 60% 100%, 0 100%);
     }
     @media screen and (max-width: $tablet) {
-      clip-path: none;
+      -webkit-clip-path: none;
+              clip-path: none;
     }
     .menu-list {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      justify-content: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
       width: 70%;
       padding: 15px;
-      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
       @media screen and (max-width: $tablet) {
         width: 100%;
-        flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
         padding: 5px;
       }
       div {
         width: 25%;
-        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
         padding: 20px;
         @media screen and (max-width: $mobile) {
           width: 50%;
@@ -307,11 +457,16 @@ body {
 
   .logo-list{
     width: 60%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 20px 15px 35px;
     @media screen and (max-width: $tablet) {
-      justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
       width: 100%;
     }
     img {
@@ -339,11 +494,18 @@ body {
       margin: 0 auto;
       max-width: 100%;
       padding: 20px 0px;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      justify-content: center;
-      align-content: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -ms-flex-line-pack: center;
+          align-content: center;
     }
     .location-cursor {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
       margin: 0 auto;
       max-width: 180px;
@@ -399,11 +561,17 @@ body {
   }
 }
 .footer-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 10px 20px;
   background-color: $dark-gray;
   color: $white;
@@ -424,8 +592,11 @@ body {
     }
   }
   .footer-menu-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-around;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     width: 50%;
     @media screen and (max-width: $tablet) {
       width: 100%;
@@ -445,6 +616,11 @@ body {
     font-family: $second-font;
     color: $gray;
     text-align: right;
+    font-size: 12px;
+    line-height: 24px;
+    font-family: "Georgia";
+    font-weight: bold;
+    font-style: italic;
     @media screen and (max-width: $tablet) {
       width: 100%;
       text-align: center;
@@ -452,7 +628,6 @@ body {
     }
   }
 }
-
 
 
 
