@@ -1,10 +1,12 @@
 @import './reset.css';
 @import './components/navbar.css';
+@import './components/dropdown.css';
+@import './components/header.css';
 
 
 :root {
-    --font-title: 'Source Sans Pro', sans-serif;
-    --font-text: 'Helvetica', sans-serif;
+    --font-text: 'Source Sans Pro', sans-serif;
+    --font-title: 'Helvetica', sans-serif;
 
     --phone: 600px;
     --tablet: 768px;
@@ -15,7 +17,20 @@
     --white: #ffffff;
     --brown: #d78e63;
     --blue: #51b1e0;
+    --green: #016742;
+    --light-green: #21912b;
 
-
+    --navbar-size: 50px;
 }
+
+
+.home-container {
+    max-width: 1600px;
+    width: 100vw;
+    height: 4000px;
+    position: relative;
+    margin: 0 auto;
+}
+
+
 

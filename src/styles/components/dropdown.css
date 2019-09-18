@@ -1,0 +1,112 @@
+.select-box {
+    position: relative;
+    display: block;
+    width: 80px;
+    margin: 0 0 0 7px;
+    font-family: var(--font-text);
+    font-size: 16px;
+    color: var(--black);
+  }
+
+  .select-box-current {
+    position: relative;
+    cursor: pointer;
+    border: 1px solid var(--blue);
+    outline: none;
+  }
+
+  .select-box-current:focus + .select-box-list {
+    opacity: 1;
+    animation-name: none;
+    box-sizing: border-box;
+  }
+
+  .select-box-current:focus + .select-box-list .select-box-option {
+    cursor: pointer;
+  }
+
+  .select-box-current:focus .select-box-icon {
+    transform: translateY(-50%) rotate(180deg);
+  }
+
+  .select-box-icon {
+    position: absolute;
+    top: 50%;
+    width: 10px;
+    right: 6px;
+    transform: translateY(-50%);
+    width: 20px;
+    transition: 0.2s ease;
+  }
+
+  .separator {
+    height: 100%;
+    width: 1px;
+    border-right: 1px solid var(--blue);
+    position: absolute;
+    top: 0;
+    right: 21px;
+  }
+
+  .select-box-value {
+    display: flex;
+  }
+
+  .select-box-input {
+    display: none;
+  }
+
+  .select-box-input:checked + .select-box-input-text {
+    display: flex;
+    align-items: center;
+  }
+
+  .select-box-input-text {
+    display: none;
+    width: 100%;
+    margin: 0;
+    padding: 5px 10px;
+    background-color: var(--white);
+    
+  }
+
+  .select-box-list {
+    position: absolute;
+    width: 100%;
+    padding: 0;
+    list-style: none;
+    opacity: 0;
+    animation-name: hide;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: step-start;
+    box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--blue);
+    border-top:none;
+  }
+
+  .select-box-option {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--white);
+    
+  }
+
+  .select-box-option img, .select-box-input-text img {
+    padding-right: 5px;
+  }
+
+  .select-box-option:hover, .select-box-option:focus {
+    color: var(--black);
+    background-color: #f0f0f0;
+  }
+  @keyframes hide {
+    from {
+      transform: scaleY(1);
+    }
+    to {
+      transform: scaleY(0);
+    }
+  }
+  
