@@ -1,0 +1,21 @@
+@import './reset.css';
+@import './components/navbar.css';
+
+
+:root {
+    --font-title: 'Source Sans Pro', sans-serif;
+    --font-text: 'Helvetica', sans-serif;
+
+    --phone: 600px;
+    --tablet: 768px;
+    --desktop: 992px;
+    --lg-desktop: 1200px;
+
+    --black: #6c6c6c;
+    --white: #ffffff;
+    --brown: #d78e63;
+    --blue: #51b1e0;
+
+
+}
+
