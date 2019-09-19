@@ -2,6 +2,7 @@
 @import './components/navbar.css';
 @import './components/dropdown.css';
 @import './components/header.css';
+@import './components/slider.css';
 
 
 :root {
@@ -11,7 +12,7 @@
     --phone: 600px;
     --tablet: 768px;
     --desktop: 992px;
-    --lg-desktop: 1200px;
+    --lg-desktop: 1040px;
 
     --black: #6c6c6c;
     --white: #ffffff;
@@ -19,6 +20,7 @@
     --blue: #51b1e0;
     --green: #016742;
     --light-green: #21912b;
+    --light-black: rgba(0, 0, 0, .3);
 
     --navbar-size: 50px;
 }
@@ -27,7 +29,7 @@
 .home-container {
     max-width: 1600px;
     width: 100vw;
-    height: 4000px;
+    height: 2000px;
     position: relative;
     margin: 0 auto;
 }

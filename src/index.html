@@ -1,86 +1,151 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Test Havas</title>
-        <link rel="stylesheet" href="./src/styles/index.css">
-        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400&display=swap" rel="stylesheet">  
-        <script src="https://kit.fontawesome.com/77684c4a3c.js" crossorigin="anonymous"></script> 
-         
-    </head>
-    <body>
-      <div class="home-container">
-        <div id="navbar">
-          <div class="navbar-container">
-              <a href="#" target="_blank">
-                <img class="navbar-logo" src="./src/img/logo.png" alt="logo naturex">
-              </a>
-              <div class="navbar-menu">
-                <div class="navbar-menu-items items-left">
-                  <a href="#"><p>who we are</p></a>
-                  <a href="#"><p>what we do</p></a>
-                  <a href="#"><p>how we do</p></a>
-                  <div class="separator-line"></div>
-                </div>
-                <div class="navbar-menu-items items-right">
-                  <a href="#"><p>business unit</p></a>
-                  <a href="#"><p>finance</p></a>
-                  <a href="#"><p>carrière</p></a>
-                  <a href="#"><p>communauté</p></a>
-                  <a href="#"><p>média</p></a>
-                  <a href="#"><p>contact</p></a>
-                  <!-- <i class="fas fa-play"></i> -->
-                </div>
-              </div>
-              <div class="navbar-actions">
-                <div class="button-search">
-                  <img src="./src/img/icons/search-icon.png" style="width:15px" alt="search">
-                </div>
-                <div class="select-box">
-                  <div class="select-box-current" tabindex="1">
-                      <div class="select-box-value"><input class="select-box-input" type="radio" id="1" value="1" name="input" checked="checked" />
-                          <p class="select-box-input-text"><img src="./src/img/icons/fr-icon.png" alt="FR flag" />FR</p>
-                      </div>
-                      <div class="select-box-value"><input class="select-box-input" type="radio" id="2" value="2" name="input" />
-                          <p class="select-box-input-text">EN</p>
-                      </div>
-                      <img class="select-box-icon" src="./src/img/icons/arrow-icon.png" style="width:10px" alt="Arrow Icon" aria-hidden="true"/>
-                      <p class="separator"></p>
-                  </div>
-                  <ul class="select-box-list">
-                    
-                      <li><label class="select-box-option" for="1" aria-hidden="aria-hidden"><img src="./src/img/icons/fr-icon.png" alt="FR flag"/>FR</label></li>
-                      <li><label class="select-box-option" for="2" aria-hidden="aria-hidden"><img src="./src/img/icons/uk-icon.png" alt="EN flag"/>EN</label></li>
-                  </ul>
-                </div>
-              </div>
-          </div>
-        </div> 
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Test Havas</title>
+      <link rel="stylesheet" href="./src/styles/index.css">
+      <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400&display=swap" rel="stylesheet">  
+      <script src="https://kit.fontawesome.com/77684c4a3c.js" crossorigin="anonymous"></script> 
+  </head>
 
-        <div id="header">
-            <div id="js-header-visuel" class="header-container">
-              <div class="header-title">
-                  <img  width="90" src="./src/img/halo.png" alt="">
-                  <h1>Naturally<br>powered<br>by naturex</h1>
+  <body>
+    <div class="home-container">
+      <!-- NAVBAR -->
+      <div id="navbar">
+        <div class="navbar-container">
+            <img class="menu-mobile" src="./src/img/menu-mobile.png" alt="menu">
+            <a href="#" target="_blank">
+              <img class="navbar-logo" src="./src/img/logo.png" alt="logo naturex">
+            </a>
+            <div class="navbar-menu">
+              <div class="navbar-menu-items items-left">
+                <a href="#"><p>who we are</p></a>
+                <a href="#"><p>what we do</p></a>
+                <a href="#"><p>how we do</p></a>
+                <div class="separator-line"></div>
               </div>
-
-              <div class="header-actions-container">
-                <div id="js-action-video" class="header-action-video">
-                  <i class="fas fa-play"></i>
-                  <p class="action-video-text">lire la vidéo</p>
-                </div>
-  
-                <div class="header-action-scroll">
-                    <i class="fas fa-angle-down fa-2x effect-1 sub-a"></i>
-                    <p class="action-scroll-text">Scrollez pour naviguer</p>
-                </div>
+              <div class="navbar-menu-items items-right">
+                <a href="#"><p>business unit</p></a>
+                <a href="#"><p>finance</p></a>
+                <a href="#"><p>carrière</p></a>
+                <a href="#"><p>communauté</p></a>
+                <a href="#"><p>média</p></a>
+                <a href="#"><p>contact</p></a>
               </div>
             </div>
-            <iframe class="youtube"  src="https://www.youtube.com/embed/Csr7UuQlBy0" frameborder="0" allowfullscreen>
-            </iframe>
+            <div class="navbar-actions">
+              <div class="button-search">
+                <img src="./src/img/icons/search-icon.png" style="width:15px" alt="search">
+              </div>
+              <div class="select-box">
+                <div class="select-box-current" tabindex="1">
+                    <div class="select-box-value"><input class="select-box-input" type="radio" id="1" value="1" name="input" checked="checked" />
+                        <p class="select-box-input-text"><img src="./src/img/icons/fr-icon.png" alt="FR flag" />FR</p>
+                    </div>
+                    <div class="select-box-value"><input class="select-box-input" type="radio" id="2" value="2" name="input" />
+                        <p class="select-box-input-text">EN</p>
+                    </div>
+                    <img class="select-box-icon" src="./src/img/icons/arrow-icon.png" style="width:10px" alt="Arrow Icon" aria-hidden="true"/>
+                    <p class="separator"></p>
+                </div>
+                <ul class="select-box-list">
+                  
+                    <li><label class="select-box-option" for="1" aria-hidden="true"><img src="./src/img/icons/fr-icon.png" alt="FR flag"/>FR</label></li>
+                    <li><label class="select-box-option" for="2" aria-hidden="true"><img src="./src/img/icons/uk-icon.png" alt="EN flag"/>EN</label></li>
+                </ul>
+              </div>
+            </div>
+        </div>
+      </div> 
+      <!-- /NAVBAR -->
+
+
+      <!-- HEADER BANNER  -->
+      <div id="header">
+          <div id="js-header-visuel" class="header-container">
+            <div class="header-title">
+                <img  width="90" src="./src/img/halo.png" alt="">
+                <h1>Naturally<br>powered<br>by naturex</h1>
+            </div>
+            <div class="header-actions-container">
+              <div id="js-action-video" class="header-action-video">
+                <i class="fas fa-play"></i>
+                <p class="action-video-text">lire la vidéo</p>
+              </div>
+              <div class="header-action-scroll">
+                  <i class="fas fa-angle-down fa-2x effect-1 sub-a"></i>
+                  <p class="action-scroll-text">Scrollez pour naviguer</p>
+              </div>
+            </div>
+          </div>
+          <iframe class="youtube" src="https://www.youtube.com/embed/Csr7UuQlBy0" style="border:0;" allowfullscreen>
+          </iframe>
+      </div>
+      <!-- /HEADER BANNER  -->
+
+
+      <!-- SLIDER -->
+      <div id="slider">
+        <div class="slider-bloc bloc-1">
+          <img src="./src/img/halo.png" alt="">
+          <div class="js-bloc">
+            <div class="slider-title">
+              <h3><strong>Who</strong><br> we are</h3>
+            </div>
+            <div class="slider-bloc-menu">
+              <ul>
+                <li><i class="fas fa-plus-circle"></i>Sourcing</li>
+                <li><i class="fas fa-plus-circle"></i>Manufacturing</li>
+                <li><i class="fas fa-plus-circle"></i>Information</li>
+                <li><i class="fas fa-plus-circle"></i>Products</li>
+              </ul>
+              <div class="slider-bloc-menu-item">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint nobis, possimus suscipit esse nulla nam explicabo</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slider-bloc bloc-2">
+          <img src="./src/img/halo.png" alt="">
+          <div class="js-bloc">
+            <div class="slider-title">
+              <h3><strong>What</strong><br> we do</h3>
+            </div>
+            <div class="slider-bloc-menu">
+              <ul>
+                <li><i class="fas fa-plus-circle"></i>Sourcing</li>
+                <li><i class="fas fa-plus-circle"></i>Manufacturing</li>
+                <li><i class="fas fa-plus-circle"></i>Information</li>
+                <li><i class="fas fa-plus-circle"></i>Products</li>
+              </ul>
+              <div class="slider-bloc-menu-item">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint nobis, possimus suscipit esse nulla nam explicabo</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slider-bloc bloc-3">
+          <img src="./src/img/halo.png" alt="">
+          <div class="js-bloc">
+            <div class="slider-title">
+              <h3><strong>How</strong><br> we do it</h3>
+            </div>
+            <div class="slider-bloc-menu">
+              <ul>
+                <li><i class="fas fa-plus-circle"></i>Sourcing</li>
+                <li><i class="fas fa-plus-circle"></i>Manufacturing</li>  
+              </ul>
+              <div class="slider-bloc-menu-item">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint nobis, possimus suscipit esse nulla nam explicabo</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    <script type="text/javascript" src="./src/scripts/index.js"></script>
-    </body>  
+      <!-- /SLIDER -->
+
+
+    </div>
+  </body>  
 </html>

@@ -110,3 +110,9 @@
     }
   }
   
+
+  @media screen and (max-width: 1040px) {
+    .select-box {
+      display: none;
+    }
+}

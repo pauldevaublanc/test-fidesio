@@ -1,0 +1,176 @@
+#slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 655px;
+}
+
+.slider-bloc {
+    display: flex;
+    position: relative;
+    width: 33.33%;
+    padding: 200px 50px 120px 80px;
+    color: var(--white);
+    font-family: var(--font-text);
+    font-weight: 200;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 18px;
+    box-sizing: border-box;
+    overflow: hidden;
+    transition: width 0.4s linear;
+    cursor: pointer;
+}
+
+.slider-bloc img {
+    width: 122px;
+    height: 448px;
+    position: absolute;
+    top: 30px;
+    left: 12%;
+}
+
+.slider-title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.slider-title h3{
+    font-size: 51px;
+    line-height: 45px;
+}
+
+.slider-title h3 strong{
+    font-size: 77px;
+    font-weight: 500;
+}
+
+.slider-bloc-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slider-bloc-menu-item{
+    width: 270px;
+    padding: 0px 35px;
+    display: none;
+}
+.slider-bloc-menu-item p{
+    padding: 10px 20px;
+    background: var(--light-black);
+    text-align: center;
+    line-height: 22px;
+}
+
+.slider-bloc-menu ul {
+    padding: 30px 0px;
+    z-index: 2;
+    display: none;
+}
+
+.slider-bloc-menu ul li {
+    padding: 12px 0px;
+    border-top: 1px solid var(--white);
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.slider-bloc-menu ul li:hover,  .slider-bloc-menu ul li i:hover{
+    background: var(--light-black);  
+}
+
+.slider-bloc-menu ul li:last-child {
+    border-bottom: 1px solid var(--white);
+}
+
+.fa-plus-circle {
+    margin-right: 10px;
+}
+
+
+.bloc-1 {
+    background-image: url('../../img/flower-1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+.bloc-2 {
+    background-image: url('../../img/flower-2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+.bloc-3 {
+    background-image: url('../../img/flower-3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+.js-bloc {
+    padding-left: 30px;
+    transition: 0.4s;
+}
+
+.expanded {
+    width: 50%;
+    transition: width 0.4s linear;
+}
+
+.visible {
+    display: 'block'!important;
+}
+
+@media screen and (max-width: 1040px) {
+    #slider {
+        height: 270px;
+    }
+
+    .slider-bloc {
+        padding: 30px 10px;
+        font-size: 12px;
+        line-height: 14px;
+    }
+
+    .slider-bloc img {
+        display: none;
+    }
+
+    .js-bloc {
+        padding-left: 0px;
+    }
+
+    .slider-title h3 strong{
+        font-size: 40px;
+        line-height: 50px;
+    }
+
+    .slider-title h3{
+        font-size: 40px;
+        line-height: 45px;
+        border-bottom: 1px solid var(--white);
+        padding: 10px 0px;
+    }
+
+    .slider-bloc-menu ul {
+        padding: 0;
+    }
+
+    .slider-bloc-menu ul li {
+        padding: 6px 0px;
+        border-bottom: 1px solid var(--white);
+        border-top: none;
+    }
+   
+}
+
